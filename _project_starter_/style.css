@@ -1,0 +1,18 @@
+/* From https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Universal selector. Apply for all */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centering horizontally */
+    justify-content: center; /* centering vertically */
+    height: 100vh; /* vh - viewport height */
+    overflow: hidden; /* scrollbar is hidden by default */
+    margin: 0;
+}

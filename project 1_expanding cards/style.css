@@ -1,0 +1,75 @@
+/* From https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Universal selector. Apply for all */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center; /* centering horizontally */
+    justify-content: center; /* centering vertically */
+    height: 100vh; /* vh - viewport height */
+    overflow: hidden; /* scrollbar is hidden by default */
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    /* flex-direction: column; /* on top of each other */
+    width: 90vw;
+}
+
+ /* panel default case (not active) */
+.panel {
+    background-size: auto 100%; /* change to background-size: cover; to make corner rounded for big screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 70px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.4;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+ /* panel h3 default case (not active) */
+.panel h3 {
+    font-size: 28px;
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    opacity: 0; /* make the h3 initially invisible */
+}
+
+
+ /* panel active case */
+.panel.active {
+    flex: 5;
+}
+
+ /* panel h3 active case */
+.panel.active h3 {
+    text-shadow: 4px 4px 4px #000;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.3s;
+}
+
+/* in case the screen is smaller 480px*/
+@media(max-width: 480px) {
+    .container{
+        width: 100vw;
+    }
+    /* hide the 4th card*/
+    .panel:nth-of-type(4) {
+        display: none;
+    }
+
+}
+
+
