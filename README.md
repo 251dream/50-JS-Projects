@@ -15,7 +15,7 @@
 </p>
 
 **Project 3 - Rotating Navigation**
- [Code](./project2_rotating_navigation/)
+ [Code](./project3_rotating_navigation/)
 <p align="center">
   <img src="img/project3.gif" alt="project 3" style="width: 500px; height: auto;" />
 </p>
