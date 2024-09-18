@@ -1,0 +1,59 @@
+/* From https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Universal selector. Apply for all */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(90deg, #015200,#00737c);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centering horizontally */
+    justify-content: center; /* centering vertically */
+    height: 100vh; /* vh - viewport height */
+    overflow: hidden; /* scrollbar is hidden by default */
+    margin: 0;
+}
+
+.search {
+    position: relative;
+    height: 50px;
+}
+
+.search .input {
+    background-color: #f2f2f2;
+    border: 0;
+    font-size: 26px;
+    padding: 10px;
+    width: 50px;
+    width: 50px;
+    transition: width 0.4s ease;
+}
+
+.btn {
+    background-color: #f2f2f2;
+    border: 0;
+    cursor: pointer;
+    font-size: 22px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.4s ease;
+}
+
+.btn:focus, .input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .btn {
+    transform: translateX(198px);
+}
